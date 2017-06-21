@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <form action="/form" method="POST" id="ff">
+      <label for="login">Введите число:</label>
+      <input id="login" type="text" name="login">
+      <input type="submit" value="Посчитать!">
+    </form>
+    <!-- <script type="text/javascript">
+      $(function() {
+        $('#ff').submit(function(e) {
+          e.preventDefault();
+          console.log('submit');
+          if ( $('#login').val().length < 5) {
+            $('.error').show();
+            return;
+          }
+
+          var data = {
+            login: $('#login').val(),
+          }
+
+          $.post('form', data, function(data){
+            console.log(data, 'success');
+            $('#login-res').text(data.login);
+            $('#password-res').text(data.password);
+            $('.res').show(1000);
+          })
+        })
+      });
+    </script> -->
+  </body>
+</html>
